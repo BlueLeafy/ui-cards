@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@600;700&display=swap");
+@import "variables";
+
+*,
+*:after,
+*:before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font: {
+    family: $font-lato;
+    size: 16px;
+  }
+  color: $clr-type-bl;
+  line-height: 1.5;
+  background: $clr-one;
+}
+main {
+  width: 100%;
+  padding: 60px 10px;
+  @media (min-width: $breakpoint) {
+    width: $breakpoint;
+    margin: 0 auto;
+  }
+  /*|  |*/
+  .card-01,
+  .card-02,
+  .card-03 {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+      rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    background: $clr-white;
+    border-radius: 5px;
+  }
+  .cat {
+    overflow: hidden;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+  }
+  img {
+    object-fit: cover;
+    height: auto;
+  }
+  /*| CARD PROFILE 01 |*/
+  .card-01 {
+    width: 416px;
+    margin: 0 auto;
+    .header {
+      width: 416px;
+      height: 200px;
+      overflow: hidden;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      img {
+        width: 480px;
+        transform: translateY(-60px);
+      }
+    }
+    .card-bottom {
+      transform: translateY(-75px);
+      .cat {
+        margin: 0 auto;
+        border: 7px solid white;
+        img {
+          width: 160px;
+          height: auto;
+          transform: translateX(-20px);
+        }
+      }
+      .card-body {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        padding: 33px 46px 0px 46px;
+        .card-text {
+          text-align: center;
+          p {
+            margin-top: 17px;
+            margin-bottom: 35px;
+          }
+          a.btn {
+            background: $clr-two;
+            border-color: $clr-two;
+            color: $clr-white;
+            &:hover {
+              background: $clr-white;
+              color: $clr-two;
+            }
+          }
+        }
+      }
+    }
+  }
+  /*| END CARD PROFILE 01 |*/
+  /*| CARD PROFILE 02 |*/
+  .card-02 {
+    width: 416px;
+    margin: 60px auto;
+    padding: 26px 46px 16px 46px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-item: center;
+    .cat {
+      margin: 0 auto 20px auto;
+      img {
+        width: 200px;
+        transform: translateY(-30px);
+      }
+    }
+    .card-body {
+      .card-text {
+        text-align: center;
+        p {
+          margin-top: 8px;
+          margin-bottom: 30px;
+        }
+        a.btn {
+          background: $clr-white;
+          border-color: $clr-three;
+          color: $clr-two;
+          font-weight: bold;
+          &:hover {
+            background: $clr-two;
+            color: $clr-white;
+            border-color: $clr-two;
+          }
+        }
+      }
+    }
+    @media (min-width: $breakpoint) {
+      width: 641px;
+      flex-direction: row;
+      justify-content: flex-start;
+      padding: 60px 164px 60px 60px;
+      .cat {
+        width: 30%;
+        margin: 0;
+      }
+      .card-body {
+        width: 60%;
+        padding-left: 30px;
+        .card-text {
+          text-align: left;
+          h2 {
+            line-height: 1;
+          }
+          p {
+            margin-top: 15px;
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+  /*| END CARD PROFILE 02 |*/
+  /*| CARD PROFILE 03 |*/
+  .card-03 {
+    width: 416px;
+    background: $clr-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .cat {
+      margin-bottom: 20px;
+      img {
+        width: 160px;
+        transform: translateY(-50px);
+      }
+    }
+    .card-text {
+      text-align: center;
+      span {
+        display: inline-block;
+        margin: 34px 0px 30px 0;
+
+        i {
+          margin-right: 5px;
+          &.fa-link {
+            margin-left: 20px;
+          }
+        }
+        a {
+          color: $clr-black;
+        }
+      }
+    }
+    a.btn {
+      background: $clr-two;
+      border-color: $clr-two;
+      color: $clr-white;
+      &:hover {
+        background: $clr-white;
+        color: $clr-two;
+      }
+    }
+    @media (min-width: $breakpoint) {
+      width: 771px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 58px 30px 42px 48px;
+      .cat {
+        margin-bottom: 0;
+      }
+      .card-text {
+        text-align: left;
+        span {
+          margin-bottom: 0;
+        }
+      }
+      .link {
+        align-self: flex-start;
+        transform: translateY(-30px);
+      }
+    }
+  }
+
+  /*| END CARD PROFILE 03 |*/
+}
